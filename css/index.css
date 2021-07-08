@@ -51,13 +51,7 @@ nav ul {
   justify-content: center;
 }
 /* toggled */
-/* header {
-  background-color: #fff;
-  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.1);
-  position: fixed;
-  width: 100%;
-  z-index: 3;
-} */
+
 .menu {
   background-color: #fff;
   width: 100%;
@@ -104,7 +98,7 @@ ul {
   position: absolute !important;
   right: 0;
   cursor: pointer;
-  /* display: inline-block; */
+  display: none;
   float: right;
   padding: 28px 20px;
   position: relative;
@@ -170,6 +164,7 @@ ul {
 }
 
 /* end toogled */
+
 .nav-link {
   display: flex;
   float: left;
@@ -222,51 +217,55 @@ footer p {
   margin: auto;
 }
 
-/* prices */
-#prices {
+/* Flexbox */
+.container-flex {
   display: flex;
-  flex-direction: row;
-  background-color: var(--color-background-white);
 }
-.prices-item {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
+/* End Flexbox */
+
+/* packages */
+.container-flex div {
+  flex-direction: row;
+  /* flex-basis: 320px; */
+}
+
+.packages-item {
   background-color: var(--color-background-light);
   box-shadow: 0px 2px 7px 0px var(--color-background-darkblue);
   transition: transform 0.1s;
-  width: 300px;
   float: left;
-  margin: 1em;
+  margin: 10px 10px;
   border-radius: 5px;
 }
-.prices-item:hover {
+.packages-item:hover {
   transform: scale(1.2);
 }
-.prices-item h2 {
+.packages-item h2 {
   text-transform: uppercase;
   color: var(--color-text-darkgray);
 }
-.prices-item h3 {
+.packages-item h3 {
   color: var(--color-text-darkgray);
 }
-.prices-item-description {
+.packages-item-description {
   background-color: var(--color-background-white);
   color: var(--color-text-darkgray);
   padding: 1em;
 }
 
-.prices-item-description ul {
+.packages-item-description ul {
   list-style: none;
   padding: 0 0.5em;
 }
-.prices-item-description ul li:before {
+.packages-item-description ul li:before {
   content: "✅";
   margin-right: 5px;
 }
-.prices-item-description ul li {
+.packages-item-description ul li {
   text-align: left;
 }
+
+
 /* modifiers */
 .pt-200 {
   padding-top: 200px;
@@ -288,23 +287,27 @@ footer p {
   background-attachment: fixed;
   background-size: cover;
   color: var(--color-text-white);
-  font-size: xx-large;
   text-align: center;
   margin: auto;
 }
-
+#main-header div {
+  justify-content: center;
+  margin: auto;
+  padding: 3em;
+}
+#main-header div img {
+  width: 400px;
+}
 /* destination */
 
 #services div {
-  display: flex;
   justify-content: center;
 }
 #services h1 {
   color: var(--color-text-black);
 }
 .destination {
-  width: 100%;
-  display: flex;
+  flex-basis: 300px;
   flex-direction: column;
   text-align: center;
   border-radius: 5px;
@@ -335,11 +338,13 @@ footer p {
 }
 .promocional {
   width: 100%;
-  text-align: center;
+  margin: auto;
 }
-/* .promocional iframe {
-  
-} */
+.promocional iframe {
+  align-self: center;
+  width: 90%;
+  height: 80%;
+}
 /* Form */
 #form {
   display: flex;
@@ -359,6 +364,13 @@ footer p {
   border: solid var(--color-primary);
   color: var(--color-text-white);
 }
+
+#form [type="submit"]:hover {
+  cursor: pointer;
+  background-color: var(--color-hover);
+  border: solid var(--color-hover);
+  color: var(--color-text-white);
+}
 #subscribe p {
   color: var(--color-text-description-light);
 }
@@ -367,126 +379,168 @@ footer p {
   color: var(--color-text-white);
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+
+
+/* Breakpoints */
+@media only screen and (min-width: 320px) and (max-width: 640px) and (-webkit-min-device-pixel-ratio: 2) {
+  nav {
+    display: none;
+  }
   .menu-icon {
-    display: none;
-  }
-  nav {
     display: flex;
   }
-  #main-header div {
-    justify-content: center;
-    margin: auto;
-    padding-top: 150px;
+  .container-flex {
+    flex-direction: column;
+    margin: 10px auto;
   }
-  #main-header div img {
-    width: 300px;
+  .container-flex div {
+    flex-basis: 100%;
   }
-
   .promocional iframe {
-    width: 600px;
-    height: 400px;
-    padding: 2em;
-  }
-
-  #form {
-    flex-direction: column;
-    align-items: center;
-  }
-  #form input {
-    width: 400px;
-    font-size: large;
-    margin: 5px;
-  }
-  #prices {
-    margin: 20px auto;
-  }
-  #services div {
-    display: flex;
-    justify-content: center;
-  }
-
-  .destination {
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    border-radius: 5px;
-    background-color: var(--color-background-light);
-    box-shadow: 0px 2px 7px 0px var(--color-background-darkblue);
-    margin: 10px;
-  }
-  #packages .prices-item {
-    width: 100%;
-  }
-
-  #prices div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-}
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
-  header {
-    padding: 5px;
-  }
-  nav {
-    display: none;
+    height: 40%
   }
   #main-header {
-    background-position: bottom;
-  }
-  #main-header div {
-    justify-content: center;
-    margin: auto;
-    padding-top: 100px;
+    padding: 40px 0px 20px;
+    background-position: center;
   }
   #main-header div img {
-    width: 300px;
+    width: 260px;
+    margin: auto;
   }
 
-  #prices {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    margin: 20px auto;
-  }
-
-  .prices-item {
-    margin: 20px auto;
-  }
-  #services div {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    margin: 20px auto;
-  }
-  .promocional iframe {
-    width: 300px;
-    height: 200px;
+  #subscribe p {
+    margin: 20px 30px;
   }
   #form {
-    display: flex;
     flex-direction: column;
-    margin: 10px;
   }
   #form input {
-    font-size: medium;
-    margin: 5px;
+    margin: 5px 20px;
+    padding: 10px;
   }
   footer {
-    padding: unset;
-    justify-content: unset;
-    display: flex;
     flex-direction: column;
+    justify-content: unset;
+    padding: 10px 20px;
   }
   footer ul {
-    display: flex;
-    flex-direction: column;
+    display: contents;
+  }
+  footer ul li {
+    float: left;
+    text-align: start;
+  }
+  footer ul li a {
+    margin: 5px 0;
   }
   footer p {
-    display: flex;
-    justify-content: center;
-    padding: 1em;
+    display: block;
+    text-align: center;
+    padding: 10px 0px;
+    margin-top: auto;
+    margin-bottom: auto;
   }
+}
+@media only screen 
+  and (min-width: 641px) 
+  and (max-width: 767px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    nav {
+      display: none;
+    }
+    .menu-icon {
+      display: flex;
+    }
+    .container-flex {
+      flex-direction: column;
+      margin: 10px auto;
+    }
+    .container-flex div {
+      flex-basis: 100%;
+    }
+    .promocional iframe {
+      height: 40%
+    }
+    #main-header {
+      padding: 40px 0px 20px;
+      background-position: center;
+    }
+    #main-header div img {
+      width: 260px;
+      margin: auto;
+    }
+  
+    #subscribe p {
+      margin: 20px 30px;
+    }
+    #form {
+      flex-direction: column;
+    }
+    #form input {
+      margin: 5px 20px;
+      padding: 10px;
+    }
+    footer {
+      flex-direction: column;
+      justify-content: unset;
+      padding: 10px 20px;
+    }
+    footer ul {
+      display: contents;
+    }
+    footer ul li {
+      float: left;
+      text-align: start;
+    }
+    footer ul li a {
+      margin: 5px 0;
+    }
+    footer p {
+      display: block;
+      text-align: center;
+      padding: 10px 0px;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+}
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    #main-header {
+      padding: 40px 0px 20px;
+      background-position: center;
+    }
+    #main-header div img {
+      width: 260px;
+      margin: auto;
+    }
+    .promocional iframe {
+      height: 40%
+    }
+    #subscribe p {
+      margin: 20px 30px;
+    }
+    #form {
+      flex-direction: column;
+    }
+    #form input {
+      margin: 5px 20%;
+      padding: 10px;
+    }
+}
+@media screen 
+  and (min-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    .promocional iframe {
+      height: 60%
+    }
+    #main-header {
+      padding: 40px 0px 20px;
+      background-position: center;
+    }
+    #main-header div img {
+      width: 400px;
+      margin: auto;
+    }
 }

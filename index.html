@@ -38,19 +38,19 @@
     <input class="menu-btn" type="checkbox" id="menu-btn" />
     <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
     <ul class="menu">
-        <li><a href="#work">Our Work</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#careers">Careers</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    
+      <li><a href="#work">Our Work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#careers">Careers</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
     <!--  -->
 
   </header>
 
   <main>
     <section id="main-header" class=" pb-20">
-      <div class="container-wrapper">
+      <div class="container-wrapper container-flex">
         <img id="header-img" src="https://www.onvacation.com/portals/1080/ON%20VACATION%20logo.png" alt="on-vacation">
         <!-- <h1>Bienvenidos</h1> -->
       </div>
@@ -58,7 +58,7 @@
     </section>
     <section id="services" class="pb-20">
       <h1 class="center ">Destinos Nacionales</h1>
-      <div class="container-wrapper">
+      <div class="container-wrapper container-flex">
         <div class="destination">
           <img
             src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/292393866.jpg?k=7e6a0bbf21d2431c14215443674e10a790ba15c3e0521e1ea59555a6e165dea0&o=&hp=1"
@@ -81,28 +81,31 @@
       </div>
     </section>
     <section id="promocionals" class="pt-20 pb-20">
-      <div class="">
+      <div class="container-wrapper ">
         <h1 class="center">Video Promocional</h1>
-        <div class="promocional">
+        <div class="promocional center">
           <iframe id="ytplayer" type="text/html" src="https://www.youtube.com/embed/EfcfC94htnw"
             frameborder="0"></iframe>
         </div>
       </div>
     </section>
 
-    <section id="prices" class="pt-20 pb-20">
-      <div id="packages" class="container-wrapper center">
+    <section id="packages" class="pt-20 pb-20 ">
+      <div class="center">
         <h2>Paquetes</h2>
-        <div class="prices-item">
+      </div>
+      <div class="container-flex container-wrapper center">
+
+        <div class="packages-item">
           <h2>Amazonas</h2>
-          <div class="prices-item-description">
+          <div class="packages-item-description">
             <h3>$989.000,00</h3>
             <ul>
               <li>
                 Tiquetes aéreos ida y regreso a leticia.
               </li>
               <li>Traslado de muelle hacia hotel.</li>
-              <li>Alojamiento en hotel Amazon.</li>
+              <!-- <li>Alojamiento en hotel Amazon.</li> -->
               <li>Alimentación full tipo Buffet ilimitado desayuno, almuerzo y cena. </li>
               <li>Bebidas y licores ilimitados de 11 am a 11pm.</li>
               <li>Seguro hotelero.</li>
@@ -111,16 +114,16 @@
             </ul>
           </div>
         </div>
-        <div class="prices-item">
+        <div class="packages-item">
           <h2>La Guajira</h2>
-          <div class="prices-item-description">
+          <div class="packages-item-description">
             <h3>$1.169.000,00</h3>
             <ul>
               <li>
                 Tiquetes aéreos ida y regreso a leticia.
               </li>
               <li>Traslado de muelle hacia hotel.</li>
-              <li>Alojamiento en hotel Amazon.</li>
+              <!-- <li>Alojamiento en hotel Amazon.</li> -->
               <li>Alimentación full tipo Buffet ilimitado desayuno, almuerzo y cena. </li>
               <li>Bebidas y licores ilimitados de 11 am a 11pm.</li>
               <li>Seguro hotelero.</li>
@@ -129,16 +132,16 @@
             </ul>
           </div>
         </div>
-        <div class="prices-item">
+        <div class="packages-item">
           <h2>San Andres</h2>
-          <div class="prices-item-description">
+          <div class="packages-item-description">
             <h3>$1.149.000,00</h3>
             <ul>
               <li>
                 Tiquetes aéreos ida y regreso a leticia.
               </li>
               <li>Traslado de muelle hacia hotel.</li>
-              <li>Alojamiento en hotel Amazon.</li>
+              <!-- <li>Alojamiento en hotel Amazon.</li> -->
               <li>Alimentación full tipo Buffet ilimitado desayuno, almuerzo y cena. </li>
               <li>Bebidas y licores ilimitados de 11 am a 11pm.</li>
               <li>Seguro hotelero.</li>
@@ -147,6 +150,8 @@
             </ul>
           </div>
         </div>
+      </div>
+
       </div>
     </section>
     <section class="subscribe">
@@ -154,9 +159,9 @@
         <h1>Recibe mas promociones</h1>
         <p>Regístrate y te enviaremos las mejores ofertas para ti.</p>
         <div>
-          <form id="form" action="https://www.reecodecamp.com/email-submit">
+          <form id="form" action="https://www.reecodecamp.com/email-submit" method="POST">
             <input type="email" placeholder="E-mail" id="email">
-            <input type="submit" value="Subscribete">
+            <input id="submit" type="submit" value="Subscribete">
           </form>
         </div>
 
