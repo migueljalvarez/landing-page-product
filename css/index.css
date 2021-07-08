@@ -231,7 +231,6 @@ footer p {
 
 .promocional iframe {
   align-self: center;
-  width: 90%;
 }
 
 /* Form */
@@ -289,7 +288,8 @@ footer p {
     flex-basis: 100%;
   }
   .promocional iframe {
-    height: 30%;
+    width: 90%;
+    height: 40%;
   }
   #main-header {
     padding: 90px 0px 20px;
@@ -353,6 +353,7 @@ footer p {
     flex-basis: 100%;
   }
   .promocional iframe {
+    width: 90%;
     height: 50%;
   }
   #main-header {
@@ -407,7 +408,8 @@ footer p {
     margin: auto;
   }
   .promocional iframe {
-    height: 75%;
+    width: 90%;
+    height: 50%;
   }
   #subscribe p {
     margin: 20px 30px;
@@ -421,9 +423,6 @@ footer p {
   }
 }
 @media screen and (min-width: 1024px) {
-  .promocional iframe {
-    height: 80%;
-  }
   #main-header {
     padding: 40px 0px 20px;
     background-position: center;
