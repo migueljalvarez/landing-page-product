@@ -433,7 +433,7 @@ footer p {
   and (min-width: 1024px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
     .promocional iframe {
-      height: 60%
+      height: 80%
     }
     #main-header {
       padding: 40px 0px 20px;
